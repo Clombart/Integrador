@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;  
+}
+
+/*Empieza header*/
+
+header{
+    background-color: #333a40;
+    height: 5rem;  
+}
+
+header ul{
+    padding:0 0 0 7rem;
+    margin:0;
+}
+
+header a{
+    display:inline !important;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 7rem;
+    margin: 0 0.5em;
+    color:white;
+}
+
+.active{
+    color:white !important;
+}
+
+.color{
+    color:rgb(140, 207, 40)!important;
+}
+
+/*Termina header*/
+
+
+
+/* Empieza main*/
+
+main{
+    padding:0 !important;
+}
+
+#portada{
+    height: 100vh;
+    background-image: url(img/ba1.jpg);
+    background-color: rgba(0, 0, 0, 0.589);
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    background-blend-mode: overlay;
+}
+
+.divDer{
+    width: 50%;
+    padding-right:7rem;
+}
+
+h1, #portada p{
+    color:white;
+    text-align: right;
+}
+
+.btn-color{
+    color:white !important;
+}
+
+.btn-bg{
+    border:rgb(140, 207, 40) 1px solid !important;
+    opacity:1 !important;
+    background-color: rgb(140, 207, 40) !important;
+}
+
+.btn-transp{
+    color: white !important;
+    border:white 1px solid!important;
+    opacity:1 !important;
+}
+
+.section{
+    height: 60vh;
+}
+
+.divIzq{
+    background-image: url(img/honolulu.jpg);
+    background-size: cover;
+}
+
+form, .secWidth{
+    width: 50vw; 
+}
+
+/* Termina main*/
+
+
+/*Empieza footer*/
+
+footer{
+    background-color: #1e4f6d;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul{
+    margin:0;
+    align-items: center;
+}
+
+footer a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-align: center; 
+    width: 7rem;
+    margin: 0 2rem;
+}
+
+/*Termina footer*/
