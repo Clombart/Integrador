@@ -9,35 +9,27 @@
 
 /*Empieza header*/
 
-header{
-    background-color: #333a40;
-    height: 5rem;  
-}
-
 header ul{
-    padding:0 0 0 7rem;
+    text-align: center; 
+    line-height: 2rem;
     margin:0;
 }
 
 header a{
-    display:inline !important;
-    text-decoration: none;
-    text-transform: capitalize;
     width: 7rem;
-    margin: 0 0.5em;
-    color:white;
+    display:inline !important;
+    text-transform: capitalize; 
 }
 
 .active{
     color:white !important;
 }
 
-.color{
+.active-gr{
     color:rgb(140, 207, 40)!important;
 }
 
 /*Termina header*/
-
 
 
 /* Empieza main*/
@@ -46,34 +38,79 @@ main{
     padding:0 !important;
 }
 
-#portada{
-    height: 100vh;
-    background-image: url(img/ba1.jpg);
+/* Carousel */
+.fondo{
     background-color: rgba(0, 0, 0, 0.589);
-    background-size: cover;
+}
+.portada{
+    color:white;
+    padding:1rem;
+    margin-bottom: 1rem;
+}
+.centrarTexto{
+    text-align: center;
+
+}
+.parrafoJust{
+    text-align: justify;
+    margin: 0 1rem;
+    padding:0;
+}
+.contenedorBtn{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.botton:hover{
+    background-color:green !important;
+}
+.active-gr:hover{
+    color:green !important;
+}
+
+/* oradores */
+.secWidth{
     width: 100%;
-    height: 90vh;
-    background-blend-mode: overlay;
+    margin:0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Lugar */
+.row{
+    margin-left:0;
+}
+
+.divIzq{
+    background-image: url(img/honolulu.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.589);
+    height: 250px;
 }
 
 .divDer{
-    width: 50%;
-    padding-right:7rem;
+    width: 100%; 
 }
 
-h1, #portada p{
-    color:white;
-    text-align: right;
+.centrarButton{
+    display: flex;
+    margin:0 auto 1rem;
 }
 
+/* Formulario*/
+form{
+    width: 100%;
+}
 .btn-color{
     color:white !important;
 }
 
-.btn-bg{
+.btn-green{
     border:rgb(140, 207, 40) 1px solid !important;
     opacity:1 !important;
-    background-color: rgb(140, 207, 40) !important;
+    background-color: rgb(140, 207, 40) !important;  
 }
 
 .btn-transp{
@@ -82,45 +119,165 @@ h1, #portada p{
     opacity:1 !important;
 }
 
-.section{
-    height: 60vh;
-}
-
-.divIzq{
-    background-image: url(img/honolulu.jpg);
-    background-size: cover;
-}
-
-form, .secWidth{
-    width: 50vw; 
-}
-
 /* Termina main*/
 
 
 /*Empieza footer*/
 
 footer{
-    background-color: #1e4f6d;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    background-color: #1e4f6d;  
 }
 
 footer ul{
     margin:0;
-    align-items: center;
+    padding:0;
 }
 
 footer a{
-    display: inline-block;
     color: white;
     text-decoration: none;
     text-transform: capitalize;
-    text-align: center; 
-    width: 7rem;
-    margin: 0 2rem;
+    line-height: 1.75rem;
 }
 
 /*Termina footer*/
+
+
+
+@media only screen and (min-width: 576px) {
+    /* Lugar */
+    .divIzq{
+        width: 50%;
+        height: auto;
+    }
+    
+    .divDer{
+        width: 50%;
+    }
+    
+    .centrarButton{
+        display: flex;
+        margin:0 auto 1rem;
+    } 
+}
+
+
+@media only screen and (min-width: 768px) {
+    /* Carousel */
+    #carouselExampleSlidesOnly{
+        position:relative;
+        height:56vw;
+        margin-bottom:1.5rem;
+    }
+
+    .carousel-inner{
+        position:absolute;
+        z-index:1;
+    }
+
+    .fondo{
+        position:relative;
+        z-index:3;
+        height:100%;
+        
+    }
+    .portada{
+        z-index:5;  
+        width: 50%;
+        position:absolute;
+        right:4rem;
+        bottom:5rem;
+        margin:0;  
+    }
+
+    .centrarTexto{
+        text-align: right;
+    }
+
+    .parrafoJust{
+        text-align: right;
+        margin: 0;
+    }
+
+    .contenedorBtn{
+        width: 100%;
+        justify-content: flex-end;
+    } 
+
+     /* Lugar */
+     .divIzq{
+        height: 400px;
+    }
+
+    .divDer p{
+        text-align: left;
+    }
+
+    .divDer h2{
+        text-align: left;
+    }
+
+    .centrarButton{
+        display: flex;
+        justify-items: flex-start;
+        margin:0;
+    }
+    
+    /* Formulario*/
+    form{
+        width: 75%;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    /*Empieza header*/
+    .navbar-collapse { 
+        flex-grow: unset;
+    }
+    /*termina header*/
+
+    .portada{ 
+        right:4rem;
+        bottom:7rem;
+    }
+    /* Oradores*/
+    .display{
+        display:flex;
+        width: 90%;
+    }
+
+    /* Formulario*/
+    form{
+        width: 50%;
+    }
+    
+    /*Empieza footer*/
+    footer{
+        height: 5rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    footer ul{
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+    }
+
+    footer li{
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*Tickets-html*/
+
+.bg-color{
+    margin:1rem auto;
+    background-color: lightblue;
+    border: lightblue;
+}
+.btn-green-largo{
+    width: 49%;
+}

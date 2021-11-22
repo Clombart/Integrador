@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Integrador</title>
+</head>
+
+<body>
+    <header>
+        <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center" >
+                    <a class="navbar-brand mx-1" href="#"><img src="../img/codoacodo.png" alt="Logo Codo a Codo"
+                        class="d-inline-block align-text-top img-fluid"></a>
+                    <a class="navbar-brand mx-3" href="#">conf bs as</a>
+                </div>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html#portada">la conferencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="../index.html#oradores" tabindex="-1" aria-disabled="true">los
+                                oradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="../index.html#lugar" tabindex="-1" aria-disabled="true">el lugar y la
+                                fecha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="../index.html#form" tabindex="-1" aria-disabled="true">convierteté en
+                                orador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active-gr" href="#">comprar tickets</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container" id="tickets">
+        <div class="row justify-content-md-center mt-4 mb-3 g-1">
+            <div class="col-md-auto">
+                <div class="card border-primary border-1 rounded-0 mb-2 ">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Estudiante</h5>
+                        <p class="card-text">Tiene un descuento</p>
+                        <h5 class="card-title">80%</h5>
+                        <p class="card-text"><small class="text-muted">*presentar documentación</small></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-auto">
+                <div class="card border-success border-1 rounded-0 mb-2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Trainee</h5>
+                        <p class="card-text">Tiene un descuento</p>
+                        <h5 class="card-title">50%</h5>
+                        <p class="card-text"><small class="text-muted">*presentar documentación</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-auto">
+                <div class="card border-warning border-1 rounded-0 mb-2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Junior</h5>
+                        <p class="card-text">Tiene un descuento</p>
+                        <h5 class="card-title">15%</h5>
+                        <p class="card-text"><small class="text-muted">*presentar documentación</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="d-flex flex-column align-items-center mb-3">
+            <h2 class="text-center text-uppercase fw-lighter fs-6">venta</h2>
+            <h2 class="text-center text-uppercase fw-bolder fs-2 ">valor de ticket $200</h2>
+
+            <form class="row mt-2">
+                
+                <div class="col mb-3">
+                    <input type="text" id="nombre" class="form-control" placeholder="Nombre" aria-label="First name">  
+                </div>             
+                <div class="col"> 
+                    <input type="text" id="apellido" class="form-control" placeholder="Apellido" aria-label="Last name">
+                </div>
+
+                <div class="mb-2">
+                    <input type="email" id="mail" class="form-control" placeholder="Correo">
+                </div>
+                    
+                <div class="col">
+                    <label for="cantidad" class="col-sm-2 col-form-label">Cantidad</label>
+                    <input type="number" id="cantidad" class="form-control" placeholder="0" min="1" max="5">
+                </div>
+                <div class="col">
+                    <label class="col-sm-2 col-form-label" for="inlineFormSelectPref">Categoría</label>
+                    <select id="categoria" class="form-select" id="inlineFormSelectPref">
+                      <option value="Estudiante" placeholder="">Estudiante</option>
+                      <option value="Trainee">Trainee</option>
+                      <option value="Junior">Junior</option>
+                    </select>
+                </div>
+                <div>
+                    <div id="celeste" class="form-control bg-color d-flex justify-content-between ">
+                        <p class="mb-0">Total a pagar:</p>
+
+                    </div>   
+                </div>
+                       
+                
+                <div class="d-flex justify-content-between mb-2">
+                    <button id="borrar" class=" btn btn-primary btn-md btn-bg btn-green btn-green-largo" type="reset">Borrar</button>
+                    <button id="resumen" class=" btn btn-primary btn-md btn-bg btn-green btn-green-largo" type="button">Resumen</button>
+                </div>      
+            </form>
+        </section>
+    </main>
+    <footer>
+        <ul class="">
+            <li><a href="">preguntas frecuentes</a></li>
+            <li><a href="">contáctanos</a></li>
+            <li><a href="">prensa</a></li>
+            <li><a href="">conferencias</a></li>
+            <li><a href="">términos y condiciones</a></li>
+            <li><a href="">privacidad</a></li>
+            <li><a href="">estudiantes</a></li>
+        </ul>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+    <script src="../js/tickets.js"></script>
+</body>
+
+</html>
